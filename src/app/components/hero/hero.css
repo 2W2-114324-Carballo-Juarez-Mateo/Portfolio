@@ -12,6 +12,7 @@
 
 .card.active {
   width: 380px;
+  max-width: calc(100vw - 80px);
   opacity: 1;
   animation: glow-pulse 4s ease-in-out infinite;
 }
@@ -27,6 +28,7 @@
 
 .card.side {
   width: 160px;
+  max-width: 25vw;
   opacity: 0.3;
   filter: blur(1px);
 }

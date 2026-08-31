@@ -1,0 +1,9 @@
+@if (visible()) {
+  <button
+    (click)="scrollToTop()"
+    class="fixed bottom-6 right-6 w-11 h-11 flex items-center justify-center rounded-full border border-white/15 bg-black/70 backdrop-blur-md text-white hover:border-[oklch(82.8%_0.111_230.318)] hover:text-[oklch(82.8%_0.111_230.318)] transition-all duration-300 z-40 shadow-lg"
+    [attr.aria-label]="'back to top'"
+  >
+    ↑
+  </button>
+}

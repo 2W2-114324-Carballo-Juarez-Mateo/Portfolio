@@ -18,6 +18,7 @@ export class Header {
 
   currentLang = signal('es');
   langOpen = signal(false);
+  menuOpen = signal(false);
   isDark = signal(true);
 
   constructor(private translate: TranslateService) {
@@ -32,6 +33,16 @@ export class Header {
 
   toggleLang() {
     this.langOpen.update((v) => !v);
+    this.menuOpen.set(false);
+  }
+
+  toggleMenu() {
+    this.menuOpen.update((v) => !v);
+    this.langOpen.set(false);
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
   }
 
   setLang(code: string) {
@@ -39,6 +50,7 @@ export class Header {
     this.currentLang.set(code);
     localStorage.setItem('lang', code);
     this.langOpen.set(false);
+    this.menuOpen.set(false);
   }
 
   toggleTheme() {

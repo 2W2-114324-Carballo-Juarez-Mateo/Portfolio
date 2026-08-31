@@ -1,59 +1,54 @@
-# FE
+# Portfolio — Mateo Carballo Juárez
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.7.
+Portfolio personal desarrollado con **Angular 22** (standalone components) y **Tailwind CSS**, con soporte multidioma (Español, Inglés, Portugués) y modo claro/oscuro.
 
-## Development server
+## ✨ Características
 
-To start a local development server, run:
+- **Hero** con carrusel de acceso a las secciones (coverflow con transiciones).
+- **Sobre mí** — trayectoria, stack y datos de contacto.
+- **Habilidades** — tecnologías organizadas por categoría (Lenguajes, Frameworks, Bases de datos, Herramientas, IA).
+- **Proyectos** — clasificados entre hechos con IA y hechos a mano, con subcategorías (Escritorio, Web, Videojuegos) y link al código.
+- **Contacto** — GitHub, LinkedIn, Instagram y email.
+- **i18n** — español, inglés y portugués con `@ngx-translate`, cambiables al instante desde el header.
+- **Modo claro/oscuro** — persistente en `localStorage`.
+- **Partículas animadas** de fondo y efectos de hover.
 
-```bash
-ng serve
-```
+## 🛠️ Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+| | |
+|---|---|
+| Framework | Angular 22 (standalone) |
+| Estilos | Tailwind CSS v4 |
+| Traducción | @ngx-translate/core v18 |
+| Build | @angular/build (esbuild) |
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 🚀 Desarrollo
 
 ```bash
-ng build
+npm install
+npm start        # compila Tailwind + arranca dev server en http://localhost:4200
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 📦 Producción
 
 ```bash
-ng test
+npm run build    # genera dist/
 ```
 
-## Running end-to-end tests
+## 🌐 Deploy
 
-For end-to-end (e2e) testing, run:
+Hosteado en **Vercel** (auto-deploy al pushear a `main`).
 
-```bash
-ng e2e
+## 📁 Estructura
+
+```
+src/app/
+├── components/   # header, hero, about, skills, projects, contact, footer, particles...
+├── i18n/         # claves de traducción (public/i18n)
+├── app.config.ts
+└── app.routes.ts
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## ©️
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2026 · Mateo Carballo Juárez

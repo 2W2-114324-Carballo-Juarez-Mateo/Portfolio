@@ -1,0 +1,39 @@
+:host {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.fall-particle {
+  position: absolute;
+  top: -10px;
+  left: var(--left);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 9999px;
+  background: white;
+  opacity: 0;
+  animation: fall var(--duration) linear var(--delay) infinite;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  10% {
+    opacity: var(--opacity);
+  }
+  50% {
+    opacity: calc(var(--opacity) * 0.55);
+  }
+  90% {
+    opacity: var(--opacity);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(25px, 100vh);
+  }
+}

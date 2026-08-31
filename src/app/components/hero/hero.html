@@ -1,0 +1,89 @@
+<section class="hero-section h-screen flex flex-col justify-start items-center pt-20 px-4 text-center text-white">
+  <div class="mb-16 max-w-3xl fade-in" [style]="{ 'animation-delay': '0.1s' }">
+    <h2 class="text-4xl font-bold mb-2">{{ 'hero.title' | translate }}</h2>
+    <h3 class="text-xl text-gray-400">{{ 'hero.subtitle' | translate }}</h3>
+  </div>
+
+  <div class="flex items-center justify-center gap-2 fade-in" [style]="{ 'animation-delay': '0.5s' }">
+    <button
+      (click)="prev()"
+      class="text-white text-3xl hover:text-[oklch(82.8%_0.111_230.318)] transition-colors px-2"
+    >
+      ◄
+    </button>
+
+    <div class="flex items-center gap-6" style="min-height: 320px;">
+      @if (prevCard(); as card) {
+        <div class="card side" (click)="goTo(prevIndex())">
+          <div
+            class="card-img"
+            [style]="{ 'background-image': 'url(' + card.image + ')' }"
+          ></div>
+        </div>
+      }
+
+      <div class="card active">
+        @for (idx of [currentIndex()]; track idx) {
+          <div
+            class="card-slide"
+            [class.slide-right]="direction() === 1"
+            [class.slide-left]="direction() === -1"
+          >
+            <div
+              class="card-img"
+              [class.top-crop]="cards[currentIndex()].route === '/about'"
+              [style]="{
+                'background-image':
+                  'url(' + cards[currentIndex()].image + ')'
+              }"
+            ></div>
+            <div class="card-footer">
+              <h4 class="text-lg font-semibold mb-1">
+                {{ cards[currentIndex()].titleKey | translate }}
+              </h4>
+              <p class="text-sm text-gray-400 mb-3">
+                {{ cards[currentIndex()].descKey | translate }}
+              </p>
+              <a
+                [routerLink]="cards[currentIndex()].route"
+                class="inline-block text-sm font-medium text-white bg-[oklch(82.8%_0.111_230.318)] hover:bg-white hover:text-[oklch(82.8%_0.111_230.318)] px-4 py-1.5 rounded-full transition-all duration-300"
+              >
+                {{ 'hero.seeMore' | translate }}
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+
+      @if (nextCard(); as card) {
+        <div class="card side" (click)="goTo(nextIndex())">
+          <div
+            class="card-img"
+            [style]="{ 'background-image': 'url(' + card.image + ')' }"
+          ></div>
+        </div>
+      }
+    </div>
+
+    <button
+      (click)="next()"
+      class="text-white text-3xl hover:text-[oklch(82.8%_0.111_230.318)] transition-colors px-2"
+    >
+      ►
+    </button>
+  </div>
+
+  <div class="flex gap-2 mt-6 fade-in" [style]="{ 'animation-delay': '0.9s' }">
+    @for (card of cards; track card.titleKey; let i = $index) {
+      <span
+        class="w-2 h-2 rounded-full cursor-pointer transition-all duration-300"
+        [class]="
+          i === currentIndex()
+            ? 'bg-[oklch(82.8%_0.111_230.318)] w-4'
+            : 'bg-gray-500 hover:bg-gray-300'
+        "
+        (click)="goTo(i)"
+      ></span>
+    }
+  </div>
+</section>

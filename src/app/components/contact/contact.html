@@ -1,0 +1,33 @@
+<section class="min-h-screen flex items-center justify-center px-4 py-16">
+  <div class="max-w-6xl mx-auto w-full">
+
+    <div class="text-center mb-12 fade-in" [style]="{ 'animation-delay': '0.1s' }">
+      <h2 class="text-3xl font-bold mb-3">{{ 'contact.title' | translate }}</h2>
+      <p class="text-gray-400 text-lg">
+        {{ 'contact.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-in" [style]="{ 'animation-delay': '0.4s' }">
+      @for (contact of contacts; track contact.title) {
+        <a
+          [href]="contact.url"
+          target="_blank"
+          rel="noopener"
+          class="contact-card group"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-10 h-10 text-gray-400 group-hover:text-[oklch(82.8%_0.111_230.318)] transition-colors duration-300"
+          >
+            <path [attr.d]="contact.path" />
+          </svg>
+          <h3 class="text-lg font-semibold mt-4">{{ contact.title }}</h3>
+          <p class="text-sm text-gray-500 mt-1 break-all">{{ contact.handle }}</p>
+        </a>
+      }
+    </div>
+
+  </div>
+</section>

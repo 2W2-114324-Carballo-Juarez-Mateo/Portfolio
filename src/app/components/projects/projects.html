@@ -1,0 +1,95 @@
+<section class="min-h-screen pt-24 pb-16 px-4">
+  <div class="max-w-6xl mx-auto w-full">
+
+    <div class="text-center mb-12 fade-in" [style]="{ 'animation-delay': '0.1s' }">
+      <h2 class="text-3xl font-bold mb-3">{{ 'projects.title' | translate }}</h2>
+      <p class="text-gray-400 text-lg">{{ 'projects.subtitle' | translate }}</p>
+    </div>
+
+    @if (active; as group) {
+      <div class="flex items-center gap-4 mb-8 fade-in" [style]="{ 'animation-delay': '0.1s' }">
+        <button
+          (click)="back()"
+          class="inline-flex items-center gap-2 px-4 py-2 border border-white/15 rounded-full text-sm text-gray-300 hover:border-[oklch(82.8%_0.111_230.318)] hover:text-white transition-all duration-300 flex-shrink-0"
+        >
+          {{ 'projects.back' | translate }}
+        </button>
+        <h3 class="text-3xl font-bold">
+          {{ group.emoji }} {{ group.label | translate }}
+        </h3>
+      </div>
+
+      @for (section of group.sections; track section.title; let si = $index) {
+        <div class="mb-8">
+          <h4
+            class="text-xl font-bold uppercase tracking-wide text-[oklch(82.8%_0.111_230.318)] border-b border-white/10 pb-2 mb-4 fade-in"
+            [style]="{ 'animation-delay': (0.3 + si * 0.2) + 's' }"
+          >
+            {{ section.title | translate }}
+          </h4>
+
+          @if (section.projects.length === 0) {
+            <p class="text-gray-600 text-sm pl-1 fade-in" [style]="{ 'animation-delay': (0.45 + si * 0.2) + 's' }">
+              {{ 'projects.comingSoon' | translate }}
+            </p>
+          } @else {
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              @for (project of section.projects; track project.nameKey; let pi = $index) {
+                <div
+                  class="project-card fade-in"
+                  [style]="{ 'animation-delay': (0.45 + si * 0.2 + pi * 0.1) + 's' }"
+                >
+                  <div class="project-img">
+                    <span class="text-5xl">📁</span>
+                  </div>
+                  <div class="project-body">
+                    <h5 class="font-semibold text-lg mb-1">{{ project.nameKey | translate }}</h5>
+                    <p class="text-sm text-gray-400 mb-3">{{ project.descKey | translate }}</p>
+                    <div class="flex flex-wrap gap-2">
+                      @for (tech of project.techs; track tech.name) {
+                        <span class="project-tech">
+                          <img [src]="tech.icon" [alt]="tech.name" class="w-4 h-4" />
+                          {{ tech.name }}
+                        </span>
+                      }
+                    </div>
+                    @if (project.link) {
+                      <a
+                        [href]="project.link"
+                        target="_blank"
+                        rel="noopener"
+                        class="mt-4 inline-flex items-center gap-1 px-4 py-1.5 border border-white/20 text-white rounded-full text-sm font-medium hover:border-[oklch(82.8%_0.111_230.318)] hover:text-[oklch(82.8%_0.111_230.318)] transition-all duration-300"
+                      >
+                        {{ 'projects.seeCode' | translate }}
+                      </a>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    } @else {
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        @for (group of groups; track group.label; let gi = $index) {
+          <button
+            (click)="selectGroup(gi)"
+            class="group-card fade-in"
+            [style]="{ 'animation-delay': (0.2 + gi * 0.2) + 's' }"
+          >
+            <span class="text-6xl">{{ group.emoji }}</span>
+            <h3 class="text-2xl font-bold mt-4">{{ group.label | translate }}</h3>
+            <p class="text-gray-400 text-sm mt-2">
+              {{ group.sections.length }} {{ 'projects.categories' | translate }}
+            </p>
+            <span class="mt-4 text-[oklch(82.8%_0.111_230.318)] font-medium">
+              {{ 'projects.seeProjects' | translate }}
+            </span>
+          </button>
+        }
+      </div>
+    }
+
+  </div>
+</section>

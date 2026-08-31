@@ -1,0 +1,70 @@
+{
+  "header": {
+    "portfolio": "Portfolio",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm Mateo Carballo Juárez",
+    "subtitle": "Welcome to my portfolio. Here you'll find personal information, skills I've been acquiring and projects I've built",
+    "seeMore": "See more →",
+    "cards": {
+      "aboutTitle": "About me",
+      "aboutDesc": "Discover my journey and passion for programming",
+      "skillsTitle": "Skills",
+      "skillsDesc": "Technologies and tools I master",
+      "projectsTitle": "Projects",
+      "projectsDesc": "Individual and group projects I've built",
+      "contactTitle": "Contact",
+      "contactDesc": "Let's talk and work together"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": ".NET Developer in training · C#, ASP.NET, REST APIs, SQL · Java & Web (HTML, CSS, JS) · Constant learning",
+    "p1": "I'm a programming student at the National Technological University (UTN), with a strong interest in software development and technological innovation. I'm in constant training, looking to take my academic knowledge into real and challenging environments.",
+    "p2": "I stand out for being a disciplined, focused person with great willpower. I enjoy learning new things and continuously improving, both technically and personally. I have a proactive attitude, energy to face challenges and the ability to stay focused until I achieve results.",
+    "p3": "On a technical level, I have knowledge in C#, JavaScript, HTML, CSS and SQL, and experience in developing web and desktop applications, working with technologies such as ASP.NET, Entity Framework and ADO.NET. I've participated in projects like library management and vehicle rental systems, applying good practices and problem solving.",
+    "p4": "I really value teamwork and a good work environment. I consider myself a collaborative, friendly and committed person, always willing to contribute and help others achieve goals together.",
+    "p5": "Currently, I'm looking for opportunities that allow me to keep growing as a developer, gain professional experience and add value to real projects.",
+    "exploreSkills": "Explore skills →",
+    "viewProjects": "View projects →",
+    "location": "📍 Villa Allende, Córdoba, Argentina"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I use and know",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "databases": "Databases",
+    "tools": "Tools",
+    "ai": "AI"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Projects built with AI and by hand",
+    "withAI": "Made with AI",
+    "byHand": "Made by hand",
+    "desktop": "Desktop applications",
+    "web": "Web pages",
+    "games": "Video games",
+    "comingSoon": "Coming soon...",
+    "back": "← Back",
+    "seeProjects": "See projects →",
+    "categories": "categories",
+    "seeCode": "View code",
+    "cards": {
+      "calculadoraName": "Scientific Calculator",
+      "calculadoraDesc": "Windows desktop app built in C# (.NET Framework) with Windows Forms. Arithmetic and scientific operations, degrees/radians mode, undo/redo and persistent history."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Do you have a project in mind or want to collaborate? Let's talk!"
+  },
+  "footer": {
+    "copyright": "© 2026 Mateo Carballo Juárez"
+  }
+}

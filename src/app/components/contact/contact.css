@@ -1,0 +1,41 @@
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: oklch(82.8% 0.111 230.318 / 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px oklch(82.8% 0.111 230.318 / 0.15);
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.fade-in:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

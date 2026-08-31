@@ -1,0 +1,48 @@
+<section class="min-h-screen flex items-center pt-24 pb-16 px-4">
+  <div class="max-w-6xl mx-auto w-full">
+
+    <div class="flex flex-col md:flex-row gap-6 items-center justify-center mb-12 fade-in" [style]="{ 'animation-delay': '0.1s' }">
+      <div class="w-48 md:w-[280px] flex-shrink-0 aspect-[4/5] overflow-hidden rounded-2xl">
+        <img
+          src="/images/sobreMiPag.jpeg"
+          alt="Mateo Carballo Juárez"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-3">{{ 'about.title' | translate }}</h2>
+        <p class="text-lg text-[oklch(82.8%_0.111_230.318)] font-medium max-w-sm mx-auto">
+          {{ 'about.subtitle' | translate }}
+        </p>
+      </div>
+    </div>
+
+    <div class="fade-in" [style]="{ 'animation-delay': '0.5s' }">
+      <div class="border-t border-white/10 pt-8 space-y-4 text-gray-300 leading-relaxed max-w-4xl text-center mx-auto">
+        <p>{{ 'about.p1' | translate }}</p>
+        <p>{{ 'about.p2' | translate }}</p>
+        <p>{{ 'about.p3' | translate }}</p>
+        <p>{{ 'about.p4' | translate }}</p>
+        <p>{{ 'about.p5' | translate }}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-6 justify-center">
+        @for (tech of techs; track tech) {
+          <span class="tech-tag">{{ tech }}</span>
+        }
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-8 justify-center">
+        <a [routerLink]="['/skills']" class="inline-flex items-center gap-1 px-5 py-2 border border-white/20 text-white rounded-full text-sm font-medium hover:border-[oklch(82.8%_0.111_230.318)] hover:text-[oklch(82.8%_0.111_230.318)] transition-all duration-300">
+          {{ 'about.exploreSkills' | translate }}
+        </a>
+        <a [routerLink]="['/projects']" class="inline-flex items-center gap-1 px-5 py-2 border border-white/20 text-white rounded-full text-sm font-medium hover:border-[oklch(82.8%_0.111_230.318)] hover:text-[oklch(82.8%_0.111_230.318)] transition-all duration-300">
+          {{ 'about.viewProjects' | translate }}
+        </a>
+      </div>
+
+      <p class="mt-6 text-sm text-gray-500 text-center">{{ 'about.location' | translate }}</p>
+    </div>
+
+  </div>
+</section>

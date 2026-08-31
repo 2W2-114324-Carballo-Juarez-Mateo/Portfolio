@@ -1,0 +1,70 @@
+{
+  "header": {
+    "portfolio": "Portfólio",
+    "about": "Sobre mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "Olá, sou Mateo Carballo Juárez",
+    "subtitle": "Bem-vindo ao meu portfólio. Aqui você encontrará informações pessoais, habilidades que venho adquirindo e projetos que realizei",
+    "seeMore": "Ver mais →",
+    "cards": {
+      "aboutTitle": "Sobre mim",
+      "aboutDesc": "Conheça minha trajetória e paixão pela programação",
+      "skillsTitle": "Habilidades",
+      "skillsDesc": "Tecnologias e ferramentas que domino",
+      "projectsTitle": "Projetos",
+      "projectsDesc": "Projetos individuais e em grupo que realizei",
+      "contactTitle": "Contato",
+      "contactDesc": "Vamos conversar e trabalhar juntos"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Desenvolvedor .NET em formação · C#, ASP.NET, REST APIs, SQL · Java & Web (HTML, CSS, JS) · Aprendizado constante",
+    "p1": "Sou estudante de programação na Universidade Tecnológica Nacional (UTN), com forte interesse em desenvolvimento de software e inovação tecnológica. Estou em constante formação, buscando levar meus conhecimentos acadêmicos para ambientes reais e desafiadores.",
+    "p2": "Me destaco por ser uma pessoa disciplinada, focada e com grande força de vontade. Gosto de aprender coisas novas e melhorar continuamente, tanto técnica quanto pessoalmente. Tenho atitude proativa, energia para enfrentar desafios e capacidade de manter o foco até alcançar resultados.",
+    "p3": "Em nível técnico, tenho conhecimentos em C#, JavaScript, HTML, CSS e SQL, e experiência no desenvolvimento de aplicações web e desktop, trabalhando com tecnologias como ASP.NET, Entity Framework e ADO.NET. Participei de projetos como sistemas de gestão de biblioteca e aluguel de veículos, aplicando boas práticas e resolução de problemas.",
+    "p4": "Valorizo muito o trabalho em equipe e o bom clima de trabalho. Considero-me uma pessoa colaborativa, gentil e comprometida, sempre disposta a contribuir e ajudar os outros a alcançar objetivos em conjunto.",
+    "p5": "Atualmente, estou em busca de oportunidades que me permitam continuar crescendo como desenvolvedor, adquirir experiência profissional e agregar valor a projetos reais.",
+    "exploreSkills": "Explorar habilidades →",
+    "viewProjects": "Ver projetos →",
+    "location": "📍 Villa Allende, Córdoba, Argentina"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologias que uso e conheço",
+    "languages": "Linguagens",
+    "frameworks": "Frameworks",
+    "databases": "Bancos de dados",
+    "tools": "Ferramentas",
+    "ai": "IA"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Projetos feitos com IA e à mão",
+    "withAI": "Feitos com IA",
+    "byHand": "Feitos à mão",
+    "desktop": "Aplicações de desktop",
+    "web": "Páginas web",
+    "games": "Jogos",
+    "comingSoon": "Em breve...",
+    "back": "← Voltar",
+    "seeProjects": "Ver projetos →",
+    "categories": "categorias",
+    "seeCode": "Ver código",
+    "cards": {
+      "calculadoraName": "Calculadora Científica",
+      "calculadoraDesc": "Aplicativo de desktop em C# (.NET Framework) com Windows Forms. Operações aritméticas e científicas, modo graus/radianos, desfazer/refazer e histórico persistente."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Tem um projeto em mente ou quer colaborar? Vamos conversar!"
+  },
+  "footer": {
+    "copyright": "© 2026 Mateo Carballo Juárez"
+  }
+}

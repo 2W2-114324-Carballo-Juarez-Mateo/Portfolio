@@ -1,0 +1,12 @@
+@for (p of particles; track p.id) {
+  <span
+    class="fall-particle"
+    [style]="{
+      '--left': p.left + '%',
+      '--size': p.size + 'px',
+      '--delay': p.delay + 's',
+      '--duration': p.duration + 's',
+      '--opacity': p.opacity,
+    }"
+  ></span>
+}

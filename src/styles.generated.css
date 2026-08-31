@@ -719,6 +719,9 @@
     .hover\:border-\[oklch\(82\.8\%_0\.111_230\.318\)\]:hover {
       border-color: oklch(82.8% 0.111 230.318);
     }
+    .hover\:bg-\[oklch\(82\.8\%_0\.111_230\.318\)\]\/10:hover {
+      background-color: color-mix(in oklab, oklch(82.8% 0.111 230.318) 10%, transparent);
+    }
     .hover\:bg-gray-300:hover {
       background-color: var(--color-gray-300);
     }

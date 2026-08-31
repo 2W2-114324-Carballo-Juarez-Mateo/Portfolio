@@ -64,6 +64,7 @@ export class Projects {
               nameKey: 'projects.cards.calculadoraName',
               descKey: 'projects.cards.calculadoraDesc',
               link: 'https://github.com/2W2-114324-Carballo-Juarez-Mateo/Calculadora-Cientifica.git',
+              image: '/images/calculadora.jpg',
               techs: [
                 { name: 'C#', icon: `${ICONS}/csharp/csharp-original.svg` },
                 { name: '.NET', icon: `${ICONS}/dotnetcore/dotnetcore-original.svg` },

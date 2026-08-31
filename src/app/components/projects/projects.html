@@ -40,7 +40,15 @@
                   [style]="{ 'animation-delay': (0.45 + si * 0.2 + pi * 0.1) + 's' }"
                 >
                   <div class="project-img">
-                    <span class="text-5xl">📁</span>
+                    @if (project.image) {
+                      <img
+                        [src]="project.image"
+                        [alt]="project.nameKey | translate"
+                        class="w-full h-full object-cover"
+                      />
+                    } @else {
+                      <span class="text-5xl">📁</span>
+                    }
                   </div>
                   <div class="project-body">
                     <h5 class="font-semibold text-lg mb-1">{{ project.nameKey | translate }}</h5>

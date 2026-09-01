@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
 import { ParticlesBg } from './components/particles-bg/particles-bg';
@@ -12,5 +13,14 @@ import { ScrollTop } from './components/scroll-top/scroll-top';
   styleUrl: './app.css'
 })
 export class App {
-  title = "Portfolio";
+  title = 'Portfolio';
+
+  constructor() {
+    const router = inject(Router);
+    router.events
+      .pipe(filter((e) => e instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0);
+      });
+  }
 }

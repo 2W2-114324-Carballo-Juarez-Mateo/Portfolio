@@ -16,7 +16,7 @@ interface FallParticle {
   styleUrl: './particles-bg.css',
 })
 export class ParticlesBg {
-  particles: FallParticle[] = Array.from({ length: 30 }, (_, i) => ({
+  particles: FallParticle[] = Array.from({ length: 18 }, (_, i) => ({
     id: i,
     left: Math.random() * 100,
     size: Math.random() * 2 + 1,

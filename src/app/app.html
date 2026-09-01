@@ -1,7 +1,7 @@
 <app-particles-bg/>
 <app-header/>
 <main class="pt-16">
-<router-outlet/>
+<router-outlet (activate)="onActivate()" />
 </main>
 <app-footer/>
 <app-scroll-top/>

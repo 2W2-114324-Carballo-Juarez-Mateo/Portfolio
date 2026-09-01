@@ -23,10 +23,25 @@ export class App {
     router.events
       .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
-        window.scrollTo(0, 0);
-        requestAnimationFrame(() => window.scrollTo(0, 0));
-        setTimeout(() => window.scrollTo(0, 0), 100);
-        setTimeout(() => window.scrollTo(0, 0), 300);
+        this.resetScroll();
+        requestAnimationFrame(() => this.resetScroll());
+        setTimeout(() => this.resetScroll(), 100);
+        setTimeout(() => this.resetScroll(), 300);
       });
+  }
+
+  onActivate() {
+    this.resetScroll();
+    requestAnimationFrame(() => this.resetScroll());
+  }
+
+  private resetScroll() {
+    const sc = document.scrollingElement;
+    if (sc) {
+      sc.scrollTop = 0;
+    }
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 }

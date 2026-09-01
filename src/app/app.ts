@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, ElementRef, inject, signal } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { Header } from './components/header/header';
@@ -14,6 +14,7 @@ import { ScrollTop } from './components/scroll-top/scroll-top';
 })
 export class App {
   title = 'Portfolio';
+  private host = inject(ElementRef<HTMLElement>);
 
   constructor() {
     if ('scrollRestoration' in history) {
@@ -36,10 +37,7 @@ export class App {
   }
 
   private resetScroll() {
-    const sc = document.scrollingElement;
-    if (sc) {
-      sc.scrollTop = 0;
-    }
+    this.host.nativeElement.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     window.scrollTo(0, 0);

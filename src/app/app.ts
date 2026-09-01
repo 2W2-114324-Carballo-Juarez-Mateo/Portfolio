@@ -16,11 +16,18 @@ export class App {
   title = 'Portfolio';
 
   constructor() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     const router = inject(Router);
     router.events
       .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+          window.scrollTo(0, 0);
+        }, 0);
       });
   }
 }

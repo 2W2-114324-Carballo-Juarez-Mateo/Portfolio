@@ -26,6 +26,8 @@
 
 html {
   background: var(--bg);
+  overflow-anchor: none;
+  scroll-behavior: auto;
 }
 
 body {

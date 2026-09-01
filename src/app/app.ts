@@ -23,11 +23,10 @@ export class App {
     router.events
       .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
-        setTimeout(() => {
-          document.documentElement.scrollTop = 0;
-          document.body.scrollTop = 0;
-          window.scrollTo(0, 0);
-        }, 0);
+        window.scrollTo(0, 0);
+        requestAnimationFrame(() => window.scrollTo(0, 0));
+        setTimeout(() => window.scrollTo(0, 0), 100);
+        setTimeout(() => window.scrollTo(0, 0), 300);
       });
   }
 }

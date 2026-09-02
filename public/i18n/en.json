@@ -57,7 +57,9 @@
     "seeCode": "View code",
     "cards": {
       "calculadoraName": "Scientific Calculator",
-      "calculadoraDesc": "Windows desktop app built in C# (.NET Framework) with Windows Forms. Arithmetic and scientific operations, degrees/radians mode, undo/redo and persistent history."
+      "calculadoraDesc": "Windows desktop app built in C# (.NET Framework) with Windows Forms. Arithmetic and scientific operations, degrees/radians mode, undo/redo and persistent history.",
+      "aircnrName": "AIR CNR — Vehicle Rental",
+      "aircnrDesc": "Full-stack web application for managing vehicle rentals. REST API with ASP.NET Core and JWT authentication, vanilla JavaScript frontend and SQL Server database. Final project for Programming II (UTN FRC)."
     }
   },
   "contact": {

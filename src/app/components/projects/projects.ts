@@ -74,7 +74,22 @@ export class Projects {
         },
         {
           title: 'projects.web',
-          projects: [],
+          projects: [
+            {
+              nameKey: 'projects.cards.aircnrName',
+              descKey: 'projects.cards.aircnrDesc',
+              link: 'https://github.com/2025-PII-1W3/TPI-Programaci-n-II-Grupo-04.git',
+              image: '/images/aircnr.jpg',
+              techs: [
+                { name: 'ASP.NET', icon: `${ICONS}/dotnetcore/dotnetcore-original.svg` },
+                { name: 'C#', icon: `${ICONS}/csharp/csharp-original.svg` },
+                { name: 'SQL Server', icon: `${ICONS}/microsoftsqlserver/microsoftsqlserver-plain.svg` },
+                { name: 'JavaScript', icon: `${ICONS}/javascript/javascript-original.svg` },
+                { name: 'HTML', icon: `${ICONS}/html5/html5-original.svg` },
+                { name: 'CSS', icon: `${ICONS}/css3/css3-original.svg` },
+              ],
+            },
+          ],
         },
         {
           title: 'projects.games',

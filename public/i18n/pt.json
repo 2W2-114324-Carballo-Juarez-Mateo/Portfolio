@@ -57,7 +57,9 @@
     "seeCode": "Ver código",
     "cards": {
       "calculadoraName": "Calculadora Científica",
-      "calculadoraDesc": "Aplicativo de desktop em C# (.NET Framework) com Windows Forms. Operações aritméticas e científicas, modo graus/radianos, desfazer/refazer e histórico persistente."
+      "calculadoraDesc": "Aplicativo de desktop em C# (.NET Framework) com Windows Forms. Operações aritméticas e científicas, modo graus/radianos, desfazer/refazer e histórico persistente.",
+      "aircnrName": "AIR CNR — Aluguel de Veículos",
+      "aircnrDesc": "Aplicativo web full-stack para gerenciamento de aluguel de veículos. API REST com ASP.NET Core e autenticação JWT, frontend em JavaScript e banco de dados SQL Server. Trabalho Prático Integrador de Programação II (UTN FRC)."
     }
   },
   "contact": {
